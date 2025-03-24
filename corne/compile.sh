@@ -22,7 +22,7 @@ echo
 sudo mount $DISK /flashing_mnt
 sudo cp crkbd_rev1_*.uf2 /flashing_mnt
 
-echo "Flashing" -n
+echo -n "Flashing"
 until [[ ! -e /flashing_mnt/INDEX.HTM ]]
 do 
     echo -n .

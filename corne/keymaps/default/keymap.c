@@ -19,14 +19,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include QMK_KEYBOARD_H
 #include "keymap_uk.h"
 
-#define LM_G(a) MT(KC_LEFT_GUI, a)
-#define RM_G(a) MT(KC_RIGHT_GUI, a)
-#define LM_S(a) MT(KC_LEFT_SHIFT, a)
-#define RM_S(a) MT(KC_RIGHT_SHIFT, a)
-#define LM_C(a) MT(KC_LEFT_CTRL, a)
-#define RM_C(a) MT(KC_RIGHT_CTRL, a)
-#define LM_A(a) MT(KC_LEFT_ALT, a)
-#define RM_A(a) MT(KC_RIGHT_ALT, a)
 #define X XXXXXXX
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -38,7 +30,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       X      ,    UK_Z,    UK_X,    UK_C,    UK_V,    UK_B,                         UK_N,    UK_M, KC_MINUS,  KC_ESC, KC_LCTL, X      ,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI,   MO(2),  KC_ENT,     KC_SPC,   MO(1), KC_BSPC
+                                          LGUI_T(KC_ESC),   MO(2),  KC_ENT,     KC_SPC,   MO(1), KC_BSPC
                                       //`--------------------------'  `--------------------------'
 
   ),
@@ -51,19 +43,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       X      , X      , X      , X      , X      , X      ,                      X      , X      , X      , X      , X      , X      ,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI, _______,  KC_SPC,     KC_SPC,   MO(3), KC_BSPC
+                                          MT(KC_RGUI, KC_ESC), _______,  KC_SPC,     KC_SPC,   MO(3), KC_BSPC
                                       //`--------------------------'  `--------------------------'
   ),
 
     [2] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      X      , UK_AT,   UK_AT, UK_HASH,  UK_DLR, UK_QUOT,                      UK_LABK, UK_RABK, UK_LCBR, UK_RCBR, UK_ASTR, X      ,
+      X      , UK_AT,   UK_PERC, UK_AMPR,  UK_DLR, UK_QUOT,                      UK_LABK, UK_RABK, UK_LCBR, UK_RCBR, UK_ASTR, X      ,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       X      , UK_DLR , UK_EXLM, UK_SCLN, UK_EQL , UK_PLUS,                      UK_DOT,  KC_UNDERSCORE, UK_LPRN, UK_RPRN, UK_CIRC,X,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       X      , UK_GRV , UK_BSLS,  UK_PND, UK_HASH, UK_QUES,                      UK_DQUO, UK_COMM, UK_LBRC, UK_RBRC, UK_TILD, X      ,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI,   MO(3),  KC_ENT,     KC_SPC, UK_COLN, KC_SLASH
+                                          MT(KC_RGUI, KC_ESC),   MO(3),  KC_ENT,     KC_SPC, UK_COLN, KC_SLASH
                                       //`--------------------------'  `--------------------------'
   )
 };
