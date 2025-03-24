@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       X      ,    UK_Q,    UK_W,    UK_E,    UK_R,    UK_T,                         UK_Y,    UK_U,    UK_I,    UK_O,   UK_P,  X      ,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      X      ,    UK_A,    UK_S,    UK_D,    UK_F,    UK_G,                         UK_H,    UK_J,    UK_K,    UK_L, UK_SCLN, X      ,
+      X      ,    UK_A,    UK_S,    UK_D,    UK_F,    UK_G,                         UK_H,    UK_J,    UK_K,    UK_L, KC_LEFT_SHIFT, X ,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       X      ,    UK_Z,    UK_X,    UK_C,    UK_V,    UK_B,                         UK_N,    UK_M, KC_MINUS,  KC_ESC, KC_LCTL, X      ,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
@@ -57,14 +57,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [2] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      X      , UK_EXLM,   UK_AT, UK_HASH,  UK_DLR, UK_PERC,                      UK_LABK, UK_RABK, UK_LCBR, UK_RCBR, UK_ASTR, X      ,
+      X      , UK_AT,   UK_AT, UK_HASH,  UK_DLR, UK_PERC,                      UK_LABK, UK_RABK, UK_LCBR, UK_RCBR, UK_ASTR, X      ,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      X      , X      , X      , UK_SCLN      , UK_EQL , UK_PLUS,                      UK_DOT,  KC_UNDERSCORE, UK_LPRN, UK_RPRN, UK_CIRC,X,
+      X      , UK_DLR , UK_EXLM, UK_SCLN, UK_EQL , UK_PLUS,                      UK_DOT,  KC_UNDERSCORE, UK_LPRN, UK_RPRN, UK_CIRC,X,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      X      , X      , X      , X      , X   , UK_QUES      ,                      UK_DQUO, UK_COMM, UK_LBRC, UK_RBRC, UK_TILD, X      ,
+      X      , UK_GRV , UK_BSLS,  UK_PND, UK_HASH, UK_QUES,                      UK_DQUO, UK_COMM, UK_LBRC, UK_RBRC, UK_TILD, X      ,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LGUI,   MO(3),  KC_ENT,     KC_SPC, UK_COLN, KC_BSPC
                                       //`--------------------------'  `--------------------------'
+                                      ////@:$$$$!!@@
   )
 };
 
