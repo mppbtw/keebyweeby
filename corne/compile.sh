@@ -18,12 +18,14 @@ if [[ ! -e $DISK ]]; then
     done
 fi
 
+echo
 sudo mount $DISK /flashing_mnt
 sudo cp crkbd_rev1_*.uf2 /flashing_mnt
 
-echo "Flashing"
+echo "Flashing" -n
 until [[ ! -e /flashing_mnt/INDEX.HTM ]]
 do 
     echo -n .
     sleep 1
 done
+echo
